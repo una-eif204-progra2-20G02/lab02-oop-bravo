@@ -7,15 +7,26 @@
 #include "Person.h"
 
 class Professor: public Person {
+
 private:
 
 double monthlySalary;
 double commissionRate;
 
 public:
+    Professor(const firstName &name, double monthlySalary, double commissionRate);
 
-Professor();
-Professor(monthlySalary:double, commissionRate:)
+    void setMonthlySalary(double monthlySalary);
+
+    void setCommissionRate(double commissionRate);
+
+    double getMonthlySalary() const;
+
+    double getCommissionRate() const;
+
+    virtual ~Professor();
+    virtual const double salary() ;
+
 
 
 };
