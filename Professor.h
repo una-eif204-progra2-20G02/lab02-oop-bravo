@@ -28,6 +28,7 @@ public:
     virtual const double salary() ;
 
 
+
 };
 
 #endif //LAB02_OOP_PROFESSOR_H
