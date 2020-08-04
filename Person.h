@@ -30,7 +30,7 @@ public:
     int getDocumentId();
     void setDocumentId(documentId: int):getDocumentId;
     virtual const double salary();
-    virtual const toString();
+
 
 
 };
