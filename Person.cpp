@@ -3,3 +3,5 @@
 //
 
 #include "Person.h"
+
+Person::Person(const string &firstName, const string &lastName, int documentId) : firstName(firstName),lastName(lastName),documentId(documentId) {}
