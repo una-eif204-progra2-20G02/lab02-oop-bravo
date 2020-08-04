@@ -7,6 +7,16 @@
 #include "Person.h"
 
 class Professor: public Person {
+private:
+
+double monthlySalary;
+double commissionRate;
+
+public:
+
+Professor();
+Professor(monthlySalary:double, commissionRate:)
+
 
 };
 
