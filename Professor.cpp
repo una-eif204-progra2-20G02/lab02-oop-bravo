@@ -35,4 +35,3 @@ Professor::~Professor() {
 const double Professor::salary() {
     return Person::salary();
 }
-//prueba
