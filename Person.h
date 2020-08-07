@@ -17,7 +17,7 @@ private:
 string firstName;
 string lastName;
 int documentId;
-
+// afasfafsada
 public:
 Person();
 Person(firstName: const string&, lastName: const string&, documentId: int);
