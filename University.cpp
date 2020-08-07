@@ -50,11 +50,20 @@ void University::setAdministrativeList(const vector<Administrative *> &administr
     University::administrativeList = administrativeList;
 }
 
-
-
 University::~University() {
 
 }
+
+void University::addAdministrative(const Administrative& administrative) {
+    //vector<Administrative*>::iterator it;
+    //it = administrativeList.begin();
+}
+
+void University::addProfessor(const Professor *professor) {
+
+}
+
+
 
 
 

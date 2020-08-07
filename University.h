@@ -42,7 +42,7 @@ public:
 
     const vector<Administrative *> &getAdministrativeList() const;
 
-    void setAdministrativeList(const vector<Administrative *> &administrativeList);
+    void setAdministrativeList(const vector<Administrative*> &administrativeList);
 
     virtual ~University();
 
@@ -51,6 +51,10 @@ public:
     bool operator==(const University &rhs) const;
 
     bool operator!=(const University &rhs) const;
+
+    void addAdministrative(const Administrative& administrative);
+
+    void addProfessor(const Professor* professor);
 
 };
 
