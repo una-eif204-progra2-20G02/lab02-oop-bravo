@@ -14,19 +14,14 @@ double monthlySalary;
 double commissionRate;
 
 public:
-    Professor(const firstName &name, double monthlySalary, double commissionRate);
-
-    void setMonthlySalary(double monthlySalary);
-
-    void setCommissionRate(double commissionRate);
-
+    Professor(string &firstName, string &lastName, int documentId, double monthlySalary, double commissionRate);
     double getMonthlySalary() const;
-
+    void setMonthlySalary(double monthlySalary);
     double getCommissionRate() const;
-
+    void setCommissionRate(double commissionRate);
+    const double salary() override ;
+    const string toString() override;
     virtual ~Professor();
-    virtual const double salary() ;
-
 
 
 };

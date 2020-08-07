@@ -7,31 +7,37 @@
 #include "Professor.h"
 
 
-Professor::Professor(const firstName &name, double monthlySalary, double commissionRate) : Person(name),
-                                                                                           monthlySalary(monthlySalary),
-                                                                                           commissionRate(
-                                                                                                   commissionRate) {}
+Professor::Professor(string &firstName, string &lastName, int documentId, double monthlySalary, double commissionRate)
+        : Person(firstName, lastName, documentId), monthlySalary(monthlySalary), commissionRate(commissionRate) {}
 
-void Professor::setMonthlySalary(double monthlySalary) {
-    Professor::monthlySalary = monthlySalary;
-}
-
-void Professor::setCommissionRate(double commissionRate) {
-    Professor::commissionRate = commissionRate;
-}
 
 double Professor::getMonthlySalary() const {
     return monthlySalary;
+}
+
+void Professor::setMonthlySalary(double monthlySalary) {
+    Professor::monthlySalary = monthlySalary;
 }
 
 double Professor::getCommissionRate() const {
     return commissionRate;
 }
 
+void Professor::setCommissionRate(double commissionRate) {
+    Professor::commissionRate = commissionRate;
+}
+
+const double Professor::salary() {
+    return 0;
+}
+
 Professor::~Professor() {
 
 }
 
-const double Professor::salary() {
-    return Person::salary();
+const string Professor::toString() {
+    stringstream prof;
+    prof << "Professor Information: " <<getFirstName() <<endl;
+    prof << "Doc Id: " <<getDocumentId() << ", Monthly Salary: " <<getMonthlySalary() <<endl;
+    return prof.str();
 }

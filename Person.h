@@ -8,53 +8,35 @@
 
 #include <string>
 #include <ostream>
+#include <sstream>
 using namespace std;
 
 /**
  * Abstract Class of Person
  */
- 
+
 class Person {
-private:
-string firstName;
-string lastName;
-int documentId;
-
-public:
-Person();
-Person(firstName: const string&, lastName: const string&, documentId: int);
-virtual ~Person();
-string getFirstName();
-void setFirstName(firstName: const string&);
-string getLastName();
-void setLastName(lastName: const string&);
-int getDocumentId();
-void setDocumentId(documentId: int):getDocumentId;
-virtual const double salary();
-virtual const toString();
-
 private:
     string firstName;
     string lastName;
     int documentId;
 
+
+
 public:
     Person();
-    Person(const string &firstName, const string &lastName, int documentId);
+    Person(string &firstName, string &lastName, int documentId);
     virtual ~Person();
-    string getFirstName();
-    void setFirstName(firstName: const string&);
-    string getLastName();
-    void setLastName(lastName: const string&);
-    int getDocumentId();
-    void setDocumentId(documentId: int):getDocumentId;
-    virtual const double salary();
-    virtual const toString();
-
+    const string &getFirstName() const;
+    void setFirstName(const string &firstName);
+    const string &getLastName() const;
+    void setLastName(const string &lastName);
+    int getDocumentId() const;
+    void setDocumentId(int documentId);
+    virtual const double salary() = 0;
+    virtual const string toString() = 0;
 
 };
-
-
 
 
 #endif //LAB02_OOP_PERSON_H

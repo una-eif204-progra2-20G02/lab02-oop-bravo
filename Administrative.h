@@ -4,24 +4,28 @@
 
 #ifndef LAB02_OOP_ADMINISTRATIVE_H
 #define LAB02_OOP_ADMINISTRATIVE_H
-#include "Person.h"
-using namespace std;
 #include <iostream>
 #include <sstream>
+#include "Person.h"
+using namespace std;
+
 
 class Administrative: public Person {
 
 private:
 double monthlySalary;
 
-public: 
-Administrative();
-Administrative(double);
-Administrative(const string&, const string&, int, double);
-double getMonthlySalary();
-void setMonthlySalary(double);
-double Salary(); // Salary(): salary ¿?
-string toString();
+public:
+    Administrative(string &firstName, string &lastName, int documentId, double monthlySalary);
+
+    double getMonthlySalary() const;
+
+    void setMonthlySalary(double monthlySalary);
+
+    const double salary() override; // Salary(): salary ¿?
+    const string toString() override;
+
+    virtual ~Administrative();
 
 };
 
