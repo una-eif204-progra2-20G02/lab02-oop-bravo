@@ -52,9 +52,9 @@ public:
 
     bool operator!=(const University &rhs) const;
 
-    void addAdministrative(const Administrative& administrative);
+    void addAdministrative( Administrative&);
 
-    void addProfessor(const Professor* professor);
+    void addProfessor(Professor*);
 
 };
 

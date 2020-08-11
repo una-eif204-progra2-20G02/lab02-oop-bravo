@@ -54,13 +54,14 @@ University::~University() {
 
 }
 
-void University::addAdministrative(const Administrative& administrative) {
-    //vector<Administrative*>::iterator it;
-    //it = administrativeList.begin();
+void University::addAdministrative(Administrative& admin) {
+    vector<Administrative*>::iterator it = administrativeList.end();
+    administrativeList.insert(it, &admin);
 }
 
-void University::addProfessor(const Professor *professor) {
-
+void University::addProfessor(Professor *prof) {
+    vector<Professor*>::iterator it = professorList.end();
+    professorList.insert(it, prof);
 }
 
 
